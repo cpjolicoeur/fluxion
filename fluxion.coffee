@@ -1,3 +1,5 @@
+Marionette = require("backbone.marionette")
+
 class Fluxion extends Marionette.Object
   @_lastID = 1
   @_prefix = "Fluxion_"
@@ -55,3 +57,5 @@ class Fluxion extends Marionette.Object
   _stopDispatching: ->
     @_pendingPayload = null
     @_isDipatching = false
+
+module.exports = new Fluxion()
